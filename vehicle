@@ -1,0 +1,28 @@
+class Vehicle {
+    protected double speed;
+    protected double maxSpeed;
+    
+    public Vehicle(double speed, double maxSpeed) {
+        this.speed = speed;
+        this.maxSpeed = maxSpeed;
+    }
+    
+    public void accelerate(double increment) {
+        speed += increment;
+        if (speed > maxSpeed) {
+            speed = maxSpeed;
+        }
+    }
+
+    public void brake(double decrement) {
+        speed -= decrement;
+        if (speed < 0) {
+            speed = 0;
+        }
+    }
+    
+
+    public void displaySpeed() {
+        System.out.println("Current speed: " + speed);
+    }
+}
