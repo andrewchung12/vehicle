@@ -1,0 +1,18 @@
+class Car extends Vehicle {
+    private String type;
+    
+    public Car(double speed, double maxSpeed, String type) {
+        super(speed, maxSpeed);
+        this.type = type;
+    }
+    
+    public void displaySpeed() {
+        System.out.println("Car Type: " + type);
+        System.out.println("Current speed: " + speed);
+        System.out.println("Mileage: " + calculateMileage());
+    }
+    
+    private double calculateMileage(double distance, double gas) {
+        return distance/gas;
+    }
+    
