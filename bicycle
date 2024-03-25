@@ -1,0 +1,16 @@
+class Bicycle extends Vehicle {
+    public Bicycle(double speed, double maxSpeed) {
+        super(speed, maxSpeed);
+    }
+    
+
+    public void displaySpeed() {
+        System.out.println("Current speed: " + speed);
+        System.out.println("Mileage: " + calculateMileage());
+    }
+    
+    private double calculateMileage(double distance, double gas) {
+        
+        return distance/gas;
+    }
+    
